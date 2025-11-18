@@ -52,13 +52,13 @@ jobs:
       - name: Deploy to IIS
         run: |
           # Define IIS site path (adjust to your environment)
-          IIS_PATH="D:\\Websites\\GitHubActionsOnPremRazorPages"
+          $env:IIS_PATH="D:\\Websites\\GitHubActionsOnPremRazorPages"
           
           echo "Stopping IIS site..."
           powershell -Command "Import-Module WebAdministration; Stop-WebSite -Name 'GitHubActionsOnPremRazorPages'"
 
           echo "Copying files..."
-          robocopy ./publish $IIS_PATH /MIR
+          robocopy ./publish $env:IIS_PATH /MIR
 
           echo "Starting IIS site..."
           powershell -Command "Import-Module WebAdministration; Start-WebSite -Name 'GitHubActionsOnPremRazorPages'"
