@@ -52,7 +52,7 @@ jobs:
       - name: Deploy to IIS
         run: |
           # Define IIS site path (adjust to your environment)
-          IIS_PATH="D:\Websites\GitHubActionsOnPremRazorPages"
+          IIS_PATH="D:\\Websites\\GitHubActionsOnPremRazorPages"
           
           echo "Stopping IIS site..."
           powershell -Command "Import-Module WebAdministration; Stop-WebSite -Name 'GitHubActionsOnPremRazorPages'"
