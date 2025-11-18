@@ -20,6 +20,7 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '8.0.x' # Adjust to your target framework
+          install-dir: '${{ github.workspace }}\\.dotnet' # Custom directory inside workspace
 
       # 3. Cache NuGet packages (optional but recommended)
       #- name: Cache NuGet packages
