@@ -52,3 +52,9 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+/.vs/GitHubActionsOnPremRazorPages
+/GitHubActionsOnPremRazorPages/appsettings.Development.json
+/GitHubActionsOnPremRazorPages/wwwroot/lib/bootstrap
+/GitHubActionsOnPremRazorPages/wwwroot/lib/jquery
+/GitHubActionsOnPremRazorPages/wwwroot/lib/jquery-validation
+/GitHubActionsOnPremRazorPages/wwwroot/lib/jquery-validation-unobtrusive
