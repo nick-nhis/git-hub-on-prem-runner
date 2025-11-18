@@ -40,9 +40,8 @@ jobs:
         run: dotnet restore
 
       - name: Restore client side libraries
-        run: 
-          libman restore 
-          working-directory: ./YourProjectFolder
+        run: libman restore 
+        working-directory: ./GitHubActionsOnPremRazorPages
 
       # 5. Build the project
       - name: Build
