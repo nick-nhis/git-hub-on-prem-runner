@@ -42,7 +42,7 @@ jobs:
       - name: Restore client side libraries
         run: 
           libman restore 
-            working-directory: ./YourProjectFolder
+          working-directory: ./YourProjectFolder
 
       # 5. Build the project
       - name: Build
