@@ -31,14 +31,18 @@ jobs:
       #    restore-keys: |
       #      ${{ runner.os }}-nuget-
 
+      # Install Libman cli
+      - name: Install Libman cli
+        run: dotnet tool install -g Microsoft.Web.LibraryManager.Cli
+
       # 4. Restore dependencies
       - name: Restore dependencies
         run: dotnet restore
 
-      - name: Restore from libman
-        run: |
-          dotnet tool install -g Microsoft.Web.LibraryManager.Cli
-          libman restore
+      - name: Restore client side libraries
+        run: 
+          libman restore 
+            working-directory: ./YourProjectFolder
 
       # 5. Build the project
       - name: Build
