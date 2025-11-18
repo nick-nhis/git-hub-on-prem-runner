@@ -60,6 +60,8 @@ jobs:
           echo "Copying files..."
           robocopy ./publish $env:IIS_PATH /MIR
 
+          # requires account running the service to have permissions to the following folder: %windir%\System32\inetsrv\config.
+          # so that is can read the IIS configuration files (such as redirection.config)
           echo "Starting IIS site..."
           powershell -Command "Import-Module WebAdministration; Start-WebSite -Name 'GitHubActionsOnPremRazorPages'"
 
