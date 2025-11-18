@@ -34,7 +34,9 @@ jobs:
       # 4. Restore dependencies
       - name: Restore dependencies
         run: dotnet restore
-        run: libman restore
+
+      - name: Restore libman
+        run: libman restor
 
       # 5. Build the project
       - name: Build
