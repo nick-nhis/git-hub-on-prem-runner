@@ -44,7 +44,7 @@ jobs:
         working-directory: ./GitHubActionsOnPremRazorPages
 
       # 5. Build the project
-       name: Build
+      - name: Build
         run: dotnet build --configuration Debug --no-restore
 
       - name: Build
